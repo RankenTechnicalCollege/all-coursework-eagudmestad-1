@@ -10,6 +10,7 @@ namespace Project3
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("=======");
             Console.WriteLine("Enter the first name:");
             string name1 = Console.ReadLine();
 
