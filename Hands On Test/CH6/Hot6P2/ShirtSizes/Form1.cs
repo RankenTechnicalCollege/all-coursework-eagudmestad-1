@@ -15,9 +15,11 @@ namespace ShirtSizes
         public frmCoolShirts()
         {
             InitializeComponent();
-        }
 
+        }
         int qtySmall = 0, qtyMedium = 0, qtyLarge = 0;
+
+
 
         private void frmCoolShirts_Load(object sender, EventArgs e)
         {
@@ -36,61 +38,60 @@ namespace ShirtSizes
             ShowInvoice();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            ClearOrder();
-        }
-
         private void btnLarge_Click(object sender, EventArgs e)
         {
             AddShirt("L");
             ShowInvoice();
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearOrder();
+        }
 
         private void ClearOrder()
         {
+            qtyLarge = 0;
+            qtyMedium = 0;
+            qtySmall = 0;
             lblLarge.Text = "";
             lblMedium.Text = "";
             lblSmall.Text = "";
             lblQtyLarge.Text = "";
             lblQtyMedium.Text = "";
             lblQtySmall.Text = "";
-            qtySmall = 0;
-            qtyMedium = 0;
-            qtyLarge = 0;
             lblSubtotal.Text = "";
-            lblTax.Text = "";
             lblTotal.Text = "";
+            lblTax.Text = "";
         }
 
-     
         private void AddShirt(string shirtSize)
         {
             //Accepts a shrit size as a string and adds it to the users order
-            switch(shirtSize)
+           switch(shirtSize)
             {
-                case "L":
-                    qtyLarge++;
-                    lblLarge.Text = qtyLarge.ToString();
-                    lblQtyLarge.Text = qtyLarge.ToString();
+                case "S":
+                    qtySmall++;
+                    lblSmall.Text = qtySmall.ToString();
+                    lblQtySmall.Text = qtySmall.ToString();
                     break;
                 case "M":
                     qtyMedium++;
                     lblMedium.Text = qtyMedium.ToString();
                     lblQtyMedium.Text = qtyMedium.ToString();
                     break;
-                case "S":
-                    qtySmall++;
-                    lblSmall.Text = qtySmall.ToString();
-                    lblQtySmall.Text = qtySmall.ToString();
+                case "L":
+                    qtyLarge++;
+                    lblLarge.Text = qtyLarge.ToString();
+                    lblQtyLarge.Text = qtyLarge.ToString();
                     break;
             }
         }
 
         private void ShowInvoice()
         {
-            decimal subtotal = (qtyLarge * 11.99m) + (qtyMedium * 10.99m) + (qtySmall * 9.99m);
+            //Displays the invoice to the user
+            decimal subtotal = ((qtySmall * 9.99m) + (qtyMedium * 10.99m) + (qtyLarge * 11.99m));
             decimal tax = subtotal * .07m;
             decimal total = subtotal + tax;
 
