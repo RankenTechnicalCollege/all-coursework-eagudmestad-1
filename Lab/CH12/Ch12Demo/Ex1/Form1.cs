@@ -17,13 +17,13 @@ namespace Ex1
             InitializeComponent();
         }
         
-        int idCount = 0;
-        int count = 0;
-        Student[] students = new Student[20];
-        private void button1_Click(object sender, EventArgs e)
-        {
-            lblOutput.Text = "";
-            idCount++;
+        //int idCount = 0;
+        //int count = 0;
+        //Student[] students = new Student[20];
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    lblOutput.Text = "";
+        //    idCount++;
             //Student s1 = new Student();
             //s1.SetId(22684);
             //s1.SetStudentName("Billy");
@@ -38,17 +38,33 @@ namespace Ex1
             //lblOutput.Text += $"{s2.ToString()}\n";
             //lblOutput.Text += $"{s3.ToString()}\n";
 
-            students[count] = new Student(txtStudentName.Text, idCount);
-            count++;
-            DisplayStudents();
-        }
+        //    students[count] = new Student(txtStudentName.Text, idCount);
+        //    count++;
+        //    DisplayStudents();
+        //}
         
-        private void DisplayStudents()
+        //private void DisplayStudents()
+        //{
+        //    for (int i = 0; i < count; i++)
+        //    {
+        //        lblOutput.Text += students[i].ToString();
+        //    }
+        //}
+
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < count; i++)
-            {
-                lblOutput.Text += students[i].ToString();
-            }
+            string color = txtColor.Text;
+            int numWheels = Convert.ToInt32(txtNumWheels.Text);
+
+            //Instantiation
+            Chair myChair = new Chair() {ChairColor=color,NumWheels=numWheels };
+            Chair yourChair = new Chair("blue", 2);
+            Chair thirdChair = new Chair("pink", 5);
+
+
+
+            lblOutput.Text = Chair.GetTotalChairs().ToString();
+
         }
     }
 }

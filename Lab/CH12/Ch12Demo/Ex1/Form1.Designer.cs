@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.lblOutput = new System.Windows.Forms.Label();
-            this.txtStudentName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtNumWheels = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(223, 169);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 81);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblOutput
             // 
@@ -52,31 +44,59 @@
             this.lblOutput.Size = new System.Drawing.Size(0, 17);
             this.lblOutput.TabIndex = 1;
             // 
-            // txtStudentName
-            // 
-            this.txtStudentName.Location = new System.Drawing.Point(264, 89);
-            this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(100, 22);
-            this.txtStudentName.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 41);
+            this.label1.Location = new System.Drawing.Point(103, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Student Name";
+            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Chair Color:";
+            // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(215, 30);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(100, 22);
+            this.txtColor.TabIndex = 3;
+            // 
+            // txtNumWheels
+            // 
+            this.txtNumWheels.Location = new System.Drawing.Point(215, 74);
+            this.txtNumWheels.Name = "txtNumWheels";
+            this.txtNumWheels.Size = new System.Drawing.Size(100, 22);
+            this.txtNumWheels.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(80, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Number of Wheels:";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(92, 115);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(206, 79);
+            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.Text = "Create Chair!";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtNumWheels);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtColor);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtStudentName);
             this.Controls.Add(this.lblOutput);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -85,11 +105,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblOutput;
-        private System.Windows.Forms.TextBox txtStudentName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.TextBox txtNumWheels;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
 
