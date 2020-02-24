@@ -57,7 +57,9 @@ namespace Ex1
             int numWheels = Convert.ToInt32(txtNumWheels.Text);
 
             //Instantiation
-            Chair myChair = new Chair() {ChairColor=color,NumWheels=numWheels };
+            Chair myChair = new Chair();
+            myChair.ChairColor = color;
+
             Chair yourChair = new Chair("blue", 2);
             Chair thirdChair = new Chair("pink", 5);
 
