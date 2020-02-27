@@ -8,11 +8,12 @@ namespace Lb1
 {
     public class Order
     {
+        //Instance Fields
         private string _name;
         private Sundae _sundae;
         private Soda _soda;
 
-        public string Name
+        public String Name
         {
             get => _name;
         }
@@ -27,21 +28,38 @@ namespace Lb1
             get => _soda;
         }
 
-        public Order(string name,bool hasSundae,bool hasSoda)
+        public double Price
+        {
+            get
+            {
+                double total = 0;
+                if (_soda != null)
+                {
+                    total += _soda.Price;
+                }
+                if(_sundae != null)
+                {
+                    total += _sundae.Price;
+                }
+                return total;
+            }
+        }
+
+        //Order Constructor
+        public Order(string name, bool hasSundae, bool hasSoda)
         {
             _name = name;
 
-            if(hasSundae)
+            if (hasSundae)
             {
                 _sundae = new Sundae();
             }
 
-            if(hasSoda)
+            if (hasSoda)
             {
                 _soda = new Soda();
             }
+
         }
-
-
     }
 }

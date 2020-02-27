@@ -47,47 +47,43 @@
             this.chkLime = new System.Windows.Forms.CheckBox();
             this.chkPeach = new System.Windows.Forms.CheckBox();
             this.chkMango = new System.Windows.Forms.CheckBox();
-            this.grpBox = new System.Windows.Forms.GroupBox();
-            this.lblOrderBox = new System.Windows.Forms.Label();
             this.lblErrorMixins = new System.Windows.Forms.Label();
-            this.grpBox.SuspendLayout();
+            this.lblOutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(16, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 13);
+            this.label1.Size = new System.Drawing.Size(250, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "What name do you want on the order?";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(12, 28);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Location = new System.Drawing.Point(16, 34);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(186, 20);
+            this.txtName.Size = new System.Drawing.Size(247, 22);
             this.txtName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(479, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(828, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Order";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(9, 239);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(12, 294);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(98, 19);
+            this.btnAdd.Size = new System.Drawing.Size(131, 23);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add item to order";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -97,29 +93,26 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(414, 240);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotal.Location = new System.Drawing.Point(898, 448);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 15);
+            this.lblTotal.Size = new System.Drawing.Size(0, 18);
             this.lblTotal.TabIndex = 4;
             // 
             // lblErrorName
             // 
             this.lblErrorName.AutoSize = true;
-            this.lblErrorName.Location = new System.Drawing.Point(12, 51);
-            this.lblErrorName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblErrorName.Location = new System.Drawing.Point(16, 63);
             this.lblErrorName.Name = "lblErrorName";
-            this.lblErrorName.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorName.Size = new System.Drawing.Size(0, 17);
             this.lblErrorName.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 76);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(16, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 13);
+            this.label3.Size = new System.Drawing.Size(178, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Do you want a sundae?";
             // 
@@ -127,20 +120,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(168, 76);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(224, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 13);
+            this.label4.Size = new System.Drawing.Size(160, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Do you want a soda?";
             // 
             // chkSundae
             // 
             this.chkSundae.AutoSize = true;
-            this.chkSundae.Location = new System.Drawing.Point(14, 102);
-            this.chkSundae.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkSundae.Location = new System.Drawing.Point(19, 126);
+            this.chkSundae.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkSundae.Name = "chkSundae";
-            this.chkSundae.Size = new System.Drawing.Size(44, 17);
+            this.chkSundae.Size = new System.Drawing.Size(54, 21);
             this.chkSundae.TabIndex = 8;
             this.chkSundae.Text = "Yes";
             this.chkSundae.UseVisualStyleBackColor = true;
@@ -148,10 +140,10 @@
             // chkSoda
             // 
             this.chkSoda.AutoSize = true;
-            this.chkSoda.Location = new System.Drawing.Point(170, 102);
-            this.chkSoda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkSoda.Location = new System.Drawing.Point(227, 126);
+            this.chkSoda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkSoda.Name = "chkSoda";
-            this.chkSoda.Size = new System.Drawing.Size(44, 17);
+            this.chkSoda.Size = new System.Drawing.Size(54, 21);
             this.chkSoda.TabIndex = 9;
             this.chkSoda.Text = "Yes";
             this.chkSoda.UseVisualStyleBackColor = true;
@@ -160,10 +152,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 132);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(16, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 13);
+            this.label5.Size = new System.Drawing.Size(135, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Sundae Toppings";
             // 
@@ -171,20 +162,19 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(168, 132);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(224, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.Size = new System.Drawing.Size(95, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Drink Mixins";
             // 
             // chkSprinkles
             // 
             this.chkSprinkles.AutoSize = true;
-            this.chkSprinkles.Location = new System.Drawing.Point(14, 156);
-            this.chkSprinkles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkSprinkles.Location = new System.Drawing.Point(19, 192);
+            this.chkSprinkles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkSprinkles.Name = "chkSprinkles";
-            this.chkSprinkles.Size = new System.Drawing.Size(69, 17);
+            this.chkSprinkles.Size = new System.Drawing.Size(88, 21);
             this.chkSprinkles.TabIndex = 12;
             this.chkSprinkles.Text = "Sprinkles";
             this.chkSprinkles.UseVisualStyleBackColor = true;
@@ -192,10 +182,10 @@
             // chkNuts
             // 
             this.chkNuts.AutoSize = true;
-            this.chkNuts.Location = new System.Drawing.Point(14, 178);
-            this.chkNuts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkNuts.Location = new System.Drawing.Point(19, 219);
+            this.chkNuts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkNuts.Name = "chkNuts";
-            this.chkNuts.Size = new System.Drawing.Size(48, 17);
+            this.chkNuts.Size = new System.Drawing.Size(59, 21);
             this.chkNuts.TabIndex = 13;
             this.chkNuts.Text = "Nuts";
             this.chkNuts.UseVisualStyleBackColor = true;
@@ -203,10 +193,10 @@
             // chkCS
             // 
             this.chkCS.AutoSize = true;
-            this.chkCS.Location = new System.Drawing.Point(14, 200);
-            this.chkCS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkCS.Location = new System.Drawing.Point(19, 246);
+            this.chkCS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkCS.Name = "chkCS";
-            this.chkCS.Size = new System.Drawing.Size(104, 17);
+            this.chkCS.Size = new System.Drawing.Size(134, 21);
             this.chkCS.TabIndex = 14;
             this.chkCS.Text = "Chocolate Syrup";
             this.chkCS.UseVisualStyleBackColor = true;
@@ -214,19 +204,18 @@
             // lblErrorToppings
             // 
             this.lblErrorToppings.AutoSize = true;
-            this.lblErrorToppings.Location = new System.Drawing.Point(14, 223);
-            this.lblErrorToppings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblErrorToppings.Location = new System.Drawing.Point(19, 274);
             this.lblErrorToppings.Name = "lblErrorToppings";
-            this.lblErrorToppings.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorToppings.Size = new System.Drawing.Size(0, 17);
             this.lblErrorToppings.TabIndex = 15;
             // 
             // chkLime
             // 
             this.chkLime.AutoSize = true;
-            this.chkLime.Location = new System.Drawing.Point(170, 156);
-            this.chkLime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkLime.Location = new System.Drawing.Point(227, 192);
+            this.chkLime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkLime.Name = "chkLime";
-            this.chkLime.Size = new System.Drawing.Size(80, 17);
+            this.chkLime.Size = new System.Drawing.Size(103, 21);
             this.chkLime.TabIndex = 16;
             this.chkLime.Text = "Lime Flavor";
             this.chkLime.UseVisualStyleBackColor = true;
@@ -234,10 +223,10 @@
             // chkPeach
             // 
             this.chkPeach.AutoSize = true;
-            this.chkPeach.Location = new System.Drawing.Point(170, 178);
-            this.chkPeach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkPeach.Location = new System.Drawing.Point(227, 219);
+            this.chkPeach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkPeach.Name = "chkPeach";
-            this.chkPeach.Size = new System.Drawing.Size(89, 17);
+            this.chkPeach.Size = new System.Drawing.Size(113, 21);
             this.chkPeach.TabIndex = 17;
             this.chkPeach.Text = "Peach Flavor";
             this.chkPeach.UseVisualStyleBackColor = true;
@@ -245,50 +234,36 @@
             // chkMango
             // 
             this.chkMango.AutoSize = true;
-            this.chkMango.Location = new System.Drawing.Point(170, 200);
-            this.chkMango.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkMango.Location = new System.Drawing.Point(227, 246);
+            this.chkMango.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkMango.Name = "chkMango";
-            this.chkMango.Size = new System.Drawing.Size(91, 17);
+            this.chkMango.Size = new System.Drawing.Size(116, 21);
             this.chkMango.TabIndex = 18;
             this.chkMango.Text = "Mango Flavor";
             this.chkMango.UseVisualStyleBackColor = true;
             // 
-            // grpBox
-            // 
-            this.grpBox.Controls.Add(this.lblOrderBox);
-            this.grpBox.Location = new System.Drawing.Point(317, 29);
-            this.grpBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpBox.Name = "grpBox";
-            this.grpBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpBox.Size = new System.Drawing.Size(200, 188);
-            this.grpBox.TabIndex = 19;
-            this.grpBox.TabStop = false;
-            // 
-            // lblOrderBox
-            // 
-            this.lblOrderBox.AutoSize = true;
-            this.lblOrderBox.Location = new System.Drawing.Point(5, 11);
-            this.lblOrderBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOrderBox.Name = "lblOrderBox";
-            this.lblOrderBox.Size = new System.Drawing.Size(0, 13);
-            this.lblOrderBox.TabIndex = 0;
-            // 
             // lblErrorMixins
             // 
             this.lblErrorMixins.AutoSize = true;
-            this.lblErrorMixins.Location = new System.Drawing.Point(170, 222);
-            this.lblErrorMixins.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblErrorMixins.Location = new System.Drawing.Point(227, 273);
             this.lblErrorMixins.Name = "lblErrorMixins";
-            this.lblErrorMixins.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorMixins.Size = new System.Drawing.Size(0, 17);
             this.lblErrorMixins.TabIndex = 20;
+            // 
+            // lblOutput
+            // 
+            this.lblOutput.Location = new System.Drawing.Point(463, 38);
+            this.lblOutput.Name = "lblOutput";
+            this.lblOutput.Size = new System.Drawing.Size(333, 366);
+            this.lblOutput.TabIndex = 21;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 271);
+            this.ClientSize = new System.Drawing.Size(1029, 495);
+            this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.lblErrorMixins);
-            this.Controls.Add(this.grpBox);
             this.Controls.Add(this.chkMango);
             this.Controls.Add(this.chkPeach);
             this.Controls.Add(this.chkLime);
@@ -308,11 +283,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Food Order";
-            this.grpBox.ResumeLayout(false);
-            this.grpBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,9 +312,8 @@
         private System.Windows.Forms.CheckBox chkLime;
         private System.Windows.Forms.CheckBox chkPeach;
         private System.Windows.Forms.CheckBox chkMango;
-        private System.Windows.Forms.GroupBox grpBox;
-        private System.Windows.Forms.Label lblOrderBox;
         private System.Windows.Forms.Label lblErrorMixins;
+        private System.Windows.Forms.Label lblOutput;
     }
 }
 

@@ -15,13 +15,13 @@ namespace Lb1
     }
     public class Sundae
     {
-        //Constants
-        public const double BASE_PRICE = 4.50;
-        public const double TOPPING_PRICE = .5;
         //Instance Fields
-        private SundaeTopping[] _toppings = new SundaeTopping[2];
+        public const Double BASE_PRICE = 4.50;
+        public const double TOPPING_PRICE = .5;
+        private SundaeTopping[] _toppings=new SundaeTopping[2];
         private int _toppingCount;
         private double _price;
+
         //Properties
         public int ToppingCount
         {
@@ -32,25 +32,32 @@ namespace Lb1
         {
             get => _price;
         }
-        //Default Constructor
+
+        //Constructor
         public Sundae()
         {
-            _toppingCount = 0;
             _price += BASE_PRICE;
+            _toppingCount = 0;
+            _toppings[0] = SundaeTopping.NONE;
         }
+
+        //Accessor Method
         public SundaeTopping GetTopping(int index)
         {
             return _toppings[index];
         }
+
+        //Mutator method
         public void AddTopping(SundaeTopping t)
         {
             if(_toppingCount < 2)
             { 
                 _toppings[_toppingCount] = t;
-                _toppingCount++;
                 _price += TOPPING_PRICE;
+                _toppingCount++;
             }
         }
+
 
     }
 }

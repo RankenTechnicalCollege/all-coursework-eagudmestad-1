@@ -12,6 +12,8 @@ namespace Lb1
 {
     public partial class Form1 : Form
     {
+        double allOrdersTotal = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,58 +21,95 @@ namespace Lb1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            bool hasSundae = chkSundae.Checked;
-            bool hasSoda = chkSoda.Checked;
+            lblErrorMixins.Text = "";
+            lblErrorName.Text = "";
+            lblErrorToppings.Text = "";
+            
+            bool hasSprinkles=false, hasNuts=false, hasSyrup=false, hasLime=false, hasPeach=false, hasMango=false;
+            int numSundaeTopings = 0,numSodaFlavors=0;
 
+            if(chkSprinkles.Checked){hasSprinkles = true;numSundaeTopings++;}
+            if(chkNuts.Checked){hasNuts = true;numSundaeTopings++;}
+            if(chkCS.Checked){hasSyrup = true;numSundaeTopings++;}
+
+            if (chkLime.Checked){ hasLime = true;numSodaFlavors++;}
+            if (chkPeach.Checked) { hasPeach = true;numSodaFlavors++;}
+            if (chkMango.Checked) { hasMango = true;numSodaFlavors++;}
+
+            bool validOrder = true;
+
+            //Data Validation
             string orderName = txtName.Text;
-            if(string.IsNullOrEmpty(orderName))
+            if(String.IsNullOrEmpty(orderName))
             {
                 lblErrorName.Text = "Name Required";
+                validOrder = false;
             }
-            else if(hasSundae == false && hasSoda == false)
+            if(chkSundae.Checked==false && chkSoda.Checked==false)
             {
-                lblErrorName.Text += " No Food Selected";
+                lblErrorName.Text += " No Food selected";
+                validOrder = false;
             }
-            else
+            if(numSundaeTopings>2)
             {
-                //No Errors
-                Order myOrder = new Order(orderName, hasSundae, hasSoda);
-
-                //Sundae Toppings
-                bool hasSprinkles = chkSprinkles.Checked;
-                bool hasNuts = chkNuts.Checked;
-                bool hasSyrup = chkCS.Checked;
-
-                //Soda Flavors
-                
-                bool hasLime = chkLime.Checked;
-                bool hasPeach = chkPeach.Checked;
-                bool hasMango = chkMango.Checked;
-
-                if(hasSprinkles && hasNuts && hasSyrup)
-                {
-                    lblErrorToppings.Text = "Only 2 toppings allowed";
-                }
-                
-                if(hasSprinkles)
-                {
-                    myOrder.Sundae.AddTopping(SundaeTopping.SPRINKLES);
-                }
-
-                if(hasNuts)
-                {
-                    myOrder.Sundae.AddTopping(SundaeTopping.NUTS);
-                }
-
-                if(hasSyrup)
-                {
-                    myOrder.Sundae.AddTopping(SundaeTopping.CHOCOLATE_SYRUP);
-                }
-
-
-
+                lblErrorToppings.Text = "Only 2 toppings allowed";
+                validOrder = false;
+            }
+            if(numSodaFlavors>1)
+            {
+                lblErrorMixins.Text = "Only 1 mixing allowed";
+                validOrder = false;
             }
 
+            if(validOrder)
+            {
+                Order anOrder = new Order(txtName.Text, chkSundae.Checked, chkSoda.Checked);
+
+                //Data output
+                //Output Name
+                lblOutput.Text += anOrder.Name + "\n-----------------\n";
+                
+                //Adding Topings and Output for Sundae
+                if(anOrder.Sundae != null)
+                {
+                    //Add Toppings for Sundae
+                    if (hasSprinkles) {anOrder.Sundae.AddTopping(SundaeTopping.SPRINKLES); }
+                    if (hasNuts) {anOrder.Sundae.AddTopping(SundaeTopping.NUTS); }
+                    if (hasSyrup) {anOrder.Sundae.AddTopping(SundaeTopping.CHOCOLATE_SYRUP); }
+
+                    //Output for Sundae
+                    lblOutput.Text += "Sundae - ";
+                    
+                    if(anOrder.Sundae.ToppingCount == 0)
+                    {
+                        lblOutput.Text += anOrder.Sundae.GetTopping(0) + " ";
+                    }
+                    
+                    for (int i = 0; i < anOrder.Sundae.ToppingCount; i++)
+                    {
+                        lblOutput.Text += anOrder.Sundae.GetTopping(i) + " ";
+                    }
+                    lblOutput.Text += $"- {anOrder.Sundae.Price}\n";
+                }
+
+                if(anOrder.Soda != null)
+                {
+                    //Add Toppings for Soda
+                    if (hasMango) { anOrder.Soda.AddFlavor(SodaFlavor.MANGO);}
+                    if (hasPeach) { anOrder.Soda.AddFlavor(SodaFlavor.PEACH); }
+                    if (hasLime) { anOrder.Soda.AddFlavor(SodaFlavor.LIME); }
+
+                    //Output for Soda
+                    lblOutput.Text += $"Soda - {anOrder.Soda.Flavor} - {anOrder.Soda.Price}\n";
+                }
+
+                lblOutput.Text += "\n";
+
+                allOrdersTotal += anOrder.Price;
+                lblTotal.Text = $"Total: {allOrdersTotal.ToString("C")}";
+
+            }
+            
         }
     }
 }
